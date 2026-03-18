@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - School Clubs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-school"></i>
+                <span>School Clubs</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="form.html" class="nav-link active">
+                        <i class="fas fa-user-graduate"></i>
+                        Student Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        Admin Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <section class="form-container">
+        <div class="form-card">
+            <h1><i class="fas fa-user-graduate"></i> Student Registration</h1>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="studentName">Full Name *</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID *</label>
+                    <input type="text" id="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade Level *</label>
+                    <select id="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="9">9th Grade</option>
+                        <option value="10">10th Grade</option>
+                        <option value="11">11th Grade</option>
+                        <option value="12">12th Grade</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Choose Your Clubs (Max 3)</label>
+                    <div class="club-grid">
+                        <div class="club-item" data-club="Math Club">
+                            <strong>📐 Math Club</strong><br>20/25 spots
+                        </div>
+                        <div class="club-item" data-club="Debate Club">
+                            <strong>🗣️ Debate Club</strong><br>18/20 spots
+                        </div>
+                        <div class="club-item" data-club="Robotics">
+                            <strong>🤖 Robotics</strong><br>15/25 spots
+                        </div>
+                        <div class="club-item" data-club="Art Club">
+                            <strong>🎨 Art Club</strong><br>22/25 spots
+                        </div>
+                        <div class="club-item" data-club="Music Club">
+                            <strong>🎵 Music Club</strong><br>12/20 spots
+                        </div>
+                        <div class="club-item" data-club="Sports">
+                            <strong>⚽ Sports Club</strong><br>25/30 spots
+                        </div>
+                    </div>
+                    <div id="selectedClubs" style="margin-top: 1rem; font-weight: 500;"></div>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <i class="fas fa-check"></i> Register Now
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="form.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
