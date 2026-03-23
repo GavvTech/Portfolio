@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = {
             name: document.getElementById('studentName').value,
             studentId: document.getElementById('studentId').value,
-            grade: document.getElementById('grade').value,
+            year: document.getElementById('year').value,
                         clubs: selectedClubs,
             timestamp: new Date().toISOString()
         };
